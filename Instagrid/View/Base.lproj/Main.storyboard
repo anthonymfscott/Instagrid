@@ -1,74 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Delm-Medium.otf">
-            <string>Delm-Medium</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Instagrid" translatesAutoresizingMaskIntoConstraints="NO" id="QcO-4k-ODS" userLabel="Logo Instagrid">
-                                <rect key="frame" x="98" y="20" width="124" height="39"/>
+                                <rect key="frame" x="347.66666666666669" y="8" width="124" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="Dmu-kU-rIw"/>
+                                    <constraint firstAttribute="height" constant="39" id="vc1-sq-U9N"/>
+                                </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SBk-vI-cci" userLabel="Swipe to share Stack View">
-                                <rect key="frame" x="83" y="108.5" width="154" height="45.5"/>
+                                <rect key="frame" x="68" y="183" width="158" height="48"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="AAB-qS-UJr">
-                                        <rect key="frame" x="70.5" y="0.0" width="13.5" height="9.5"/>
+                                        <rect key="frame" x="74.333333333333343" y="0.0" width="9.6666666666666714" height="13.333333333333334"/>
+                                        <variation key="heightClass=compact" image="Arrow Left"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zzu-kx-c7b">
-                                        <rect key="frame" x="0.0" y="17.5" width="154" height="28"/>
-                                        <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="25"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zzu-kx-c7b">
+                                        <rect key="frame" x="0.0" y="21.333333333333343" width="158" height="26.666666666666671"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Swipe up to share">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <font key="NSFont" size="24" name="Delm-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact">
+                                            <attributedString key="attributedText">
+                                                <fragment content="Swipe left to share">
+                                                    <attributes>
+                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <font key="NSFont" size="24" name="Delm-Medium"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                            <tabStops>
+                                                                <textTab alignment="left" location="28">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="56">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="84">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="112">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="140">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="168">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="196">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="224">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="252">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="280">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="308">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="336">
+                                                                    <options/>
+                                                                </textTab>
+                                                            </tabStops>
+                                                        </paragraphStyle>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </variation>
                                     </label>
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dwg-bp-ZYC" userLabel="Square View">
-                                <rect key="frame" x="38" y="162" width="244" height="244"/>
+                                <rect key="frame" x="242" y="63" width="335" height="335"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="jSz-ek-msd" userLabel="Parent Stack View">
-                                        <rect key="frame" x="16" y="16" width="212" height="212"/>
+                                        <rect key="frame" x="16" y="16" width="303" height="303"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hes-Ke-dm2" userLabel="Top Stack View">
-                                                <rect key="frame" x="0.0" y="0.0" width="212" height="98"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="303" height="143.66666666666666"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wQ-Dz-c6q" userLabel="Left Button ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="98" height="98"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="143.66666666666666" height="143.66666666666666"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="Plus"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62l-Vk-FuT" userLabel="Right Button">
-                                                        <rect key="frame" x="114" y="0.0" width="98" height="98"/>
+                                                        <rect key="frame" x="159.66666666666669" y="0.0" width="143.33333333333331" height="143.66666666666666"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="Plus"/>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Sy8-Og-pQc" userLabel="Bottom Stack View">
-                                                <rect key="frame" x="0.0" y="114" width="212" height="98"/>
+                                                <rect key="frame" x="0.0" y="159.66666666666663" width="303" height="143.33333333333337"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inR-xV-GpR" userLabel="Left Button ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="98" height="98"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="143.66666666666666" height="143.33333333333334"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="Plus"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvz-Iu-Cld" userLabel="Right Button">
-                                                        <rect key="frame" x="114" y="0.0" width="98" height="98"/>
+                                                        <rect key="frame" x="159.66666666666669" y="0.0" width="143.33333333333331" height="143.33333333333334"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="Plus"/>
                                                     </button>
@@ -87,18 +144,18 @@
                                 </constraints>
                                 <variation key="heightClass=compact">
                                     <mask key="constraints">
-                                        <exclude reference="VQd-wP-shb"/>
-                                        <exclude reference="mIY-o8-xI4"/>
-                                        <exclude reference="u0e-Fd-TNY"/>
-                                        <exclude reference="znb-U4-dUW"/>
+                                        <include reference="VQd-wP-shb"/>
+                                        <include reference="mIY-o8-xI4"/>
+                                        <include reference="u0e-Fd-TNY"/>
+                                        <include reference="znb-U4-dUW"/>
                                     </mask>
                                 </variation>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hXN-q3-tV8" userLabel="Layout Choice Stack View">
-                                <rect key="frame" x="54" y="482.5" width="212" height="65.5"/>
+                                <rect key="frame" x="713.66666666666663" y="63" width="106.33333333333337" height="335"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHL-Ei-R04" userLabel="Left Button">
-                                        <rect key="frame" x="0.0" y="0.0" width="65.5" height="65.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="106.33333333333333" height="106.33333333333333"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="eHL-Ei-R04" secondAttribute="height" multiplier="1:1" id="LUR-ic-I4y"/>
                                         </constraints>
@@ -106,7 +163,7 @@
                                         <state key="selected" image="Selected"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFb-m3-8K6" userLabel="Center Button">
-                                        <rect key="frame" x="73.5" y="0.0" width="65" height="65.5"/>
+                                        <rect key="frame" x="0.0" y="114.33333333333334" width="106.33333333333333" height="106.33333333333334"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="HFb-m3-8K6" secondAttribute="height" multiplier="1:1" id="UeM-tP-Kgv"/>
                                         </constraints>
@@ -114,7 +171,7 @@
                                         <state key="selected" image="Selected"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cN7-Le-U5P" userLabel="Right Button">
-                                        <rect key="frame" x="146.5" y="0.0" width="65.5" height="65.5"/>
+                                        <rect key="frame" x="0.0" y="228.66666666666671" width="106.33333333333333" height="106.33333333333334"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="cN7-Le-U5P" secondAttribute="height" multiplier="1:1" id="umw-UI-wJd"/>
                                         </constraints>
@@ -133,31 +190,70 @@
                         </subviews>
                         <color key="backgroundColor" red="0.71839183569999998" green="0.84204041959999998" blue="0.89805072549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="dwg-bp-ZYC" firstAttribute="top" secondItem="QcO-4k-ODS" secondAttribute="bottom" constant="16" id="0iH-Rq-HXR"/>
                             <constraint firstItem="QcO-4k-ODS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="4Ld-z7-AHl">
-                                <variation key="heightClass=compact" constant="10"/>
+                                <variation key="heightClass=compact" constant="8"/>
                             </constraint>
+                            <constraint firstItem="hXN-q3-tV8" firstAttribute="bottom" secondItem="dwg-bp-ZYC" secondAttribute="bottom" id="92Y-fD-4l8"/>
+                            <constraint firstAttribute="bottom" secondItem="dwg-bp-ZYC" secondAttribute="bottom" constant="16" id="AWl-hr-Fym"/>
                             <constraint firstItem="dwg-bp-ZYC" firstAttribute="top" secondItem="SBk-vI-cci" secondAttribute="bottom" constant="8" id="BHe-FD-yuW"/>
+                            <constraint firstItem="dwg-bp-ZYC" firstAttribute="top" secondItem="QcO-4k-ODS" secondAttribute="bottom" constant="8" symbolic="YES" id="HNG-jl-ren"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dwg-bp-ZYC" secondAttribute="trailing" constant="38" id="PwL-6s-mYD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hXN-q3-tV8" secondAttribute="bottom" constant="20" id="RaQ-Qi-WKY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hXN-q3-tV8" secondAttribute="bottom" constant="24" id="RaQ-Qi-WKY"/>
+                            <constraint firstItem="SBk-vI-cci" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="Tlj-Gu-Qzb"/>
                             <constraint firstItem="dwg-bp-ZYC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XhT-oQ-RWF"/>
                             <constraint firstItem="SBk-vI-cci" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aVr-tZ-p41"/>
                             <constraint firstItem="dwg-bp-ZYC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fA8-Zm-wWA"/>
+                            <constraint firstItem="QcO-4k-ODS" firstAttribute="centerX" secondItem="dwg-bp-ZYC" secondAttribute="centerX" id="fmg-O4-siB"/>
+                            <constraint firstItem="dwg-bp-ZYC" firstAttribute="leading" secondItem="SBk-vI-cci" secondAttribute="trailing" constant="16" id="gwr-fL-ETy">
+                                <variation key="heightClass=compact" constant="16"/>
+                            </constraint>
+                            <constraint firstItem="SBk-vI-cci" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lSF-bA-zrZ"/>
+                            <constraint firstItem="hXN-q3-tV8" firstAttribute="top" secondItem="dwg-bp-ZYC" secondAttribute="top" id="mCU-hx-3fU"/>
                             <constraint firstItem="dwg-bp-ZYC" firstAttribute="trailing" secondItem="hXN-q3-tV8" secondAttribute="trailing" constant="16" id="psO-XL-Lr5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hXN-q3-tV8" secondAttribute="trailing" constant="32" id="pzJ-bS-b8g"/>
                             <constraint firstItem="hXN-q3-tV8" firstAttribute="leading" secondItem="dwg-bp-ZYC" secondAttribute="leading" constant="16" id="rg2-ak-Ltg"/>
                             <constraint firstItem="QcO-4k-ODS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t94-9g-Wfj"/>
                             <constraint firstItem="dwg-bp-ZYC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="ueq-n9-M1a"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="pzJ-bS-b8g"/>
+                                <exclude reference="Tlj-Gu-Qzb"/>
+                                <exclude reference="lSF-bA-zrZ"/>
+                                <exclude reference="0iH-Rq-HXR"/>
+                                <exclude reference="AWl-hr-Fym"/>
+                                <exclude reference="HNG-jl-ren"/>
+                                <exclude reference="gwr-fL-ETy"/>
+                                <exclude reference="fmg-O4-siB"/>
+                                <exclude reference="92Y-fD-4l8"/>
+                                <exclude reference="mCU-hx-3fU"/>
+                            </mask>
+                        </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
                                 <exclude reference="PwL-6s-mYD"/>
                                 <exclude reference="RaQ-Qi-WKY"/>
-                                <exclude reference="t94-9g-Wfj"/>
+                                <include reference="pzJ-bS-b8g"/>
+                                <include reference="Tlj-Gu-Qzb"/>
                                 <exclude reference="aVr-tZ-p41"/>
+                                <include reference="lSF-bA-zrZ"/>
+                                <include reference="0iH-Rq-HXR"/>
+                                <include reference="AWl-hr-Fym"/>
                                 <exclude reference="BHe-FD-yuW"/>
+                                <exclude reference="HNG-jl-ren"/>
                                 <exclude reference="XhT-oQ-RWF"/>
                                 <exclude reference="fA8-Zm-wWA"/>
+                                <include reference="gwr-fL-ETy"/>
+                                <exclude reference="psO-XL-Lr5"/>
                                 <exclude reference="ueq-n9-M1a"/>
+                                <include reference="4Ld-z7-AHl"/>
+                                <include reference="fmg-O4-siB"/>
+                                <exclude reference="t94-9g-Wfj"/>
+                                <include reference="92Y-fD-4l8"/>
+                                <include reference="mCU-hx-3fU"/>
+                                <exclude reference="rg2-ak-Ltg"/>
                             </mask>
                         </variation>
                     </view>
@@ -168,7 +264,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Arrow Up" width="13.5" height="9.5"/>
+        <image name="Arrow Left" width="9.6666669845581055" height="13.333333015441895"/>
+        <image name="Arrow Up" width="13.333333015441895" height="9.6666669845581055"/>
         <image name="Instagrid" width="124" height="39"/>
         <image name="Layout 1" width="80" height="80"/>
         <image name="Layout 2" width="80" height="80"/>
