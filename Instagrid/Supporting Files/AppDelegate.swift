@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Instagrid
 //
-//  Created by Tony Scott enfant Depaepe on 06/11/2019.
+//  Created by anthonymfscott on 06/11/2019.
 //  Copyright © 2019 anthonymfscott. All rights reserved.
 //
 
