@@ -15,7 +15,6 @@
 		04DADB2A2373749900DCD12F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04DADB282373749900DCD12F /* Main.storyboard */; };
 		04DADB2C2373749A00DCD12F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DADB2B2373749A00DCD12F /* Assets.xcassets */; };
 		04DADB2F2373749A00DCD12F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04DADB2D2373749A00DCD12F /* LaunchScreen.storyboard */; };
-		AD9A581C243EE9A6001A7F57 /* LayoutChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9A581B243EE9A6001A7F57 /* LayoutChoiceView.swift */; };
 		AD9A581D243EFE02001A7F57 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04C69D062376BF51009C68EE /* Delm-Medium.otf */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +30,6 @@
 		04DADB2B2373749A00DCD12F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04DADB2E2373749A00DCD12F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04DADB302373749A00DCD12F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AD9A581B243EE9A6001A7F57 /* LayoutChoiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutChoiceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +62,6 @@
 			children = (
 				04DADB282373749900DCD12F /* Main.storyboard */,
 				04918F4B23A7B73A006C6CC0 /* GridView.swift */,
-				AD9A581B243EE9A6001A7F57 /* LayoutChoiceView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,7 +176,6 @@
 				04DADB272373749900DCD12F /* MainViewController.swift in Sources */,
 				04DADB232373749900DCD12F /* AppDelegate.swift in Sources */,
 				04DADB252373749900DCD12F /* SceneDelegate.swift in Sources */,
-				AD9A581C243EE9A6001A7F57 /* LayoutChoiceView.swift in Sources */,
 				04918F4C23A7B73A006C6CC0 /* GridView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -33,11 +33,11 @@ class MainViewController: UIViewController {
         
         sender.isSelected = true
         
-        selectLayout(typeNumber: sender.tag)
+        selectLayout(number: sender.tag)
     }
     
-    private func selectLayout(typeNumber: Int) {
-        switch typeNumber {
+    private func selectLayout(number: Int) {
+        switch number {
         case 1:
             gridView.layout = .oneTwo
         case 2:
@@ -59,11 +59,24 @@ class MainViewController: UIViewController {
     }
     
     @objc func dragGridView(_ sender: UIPanGestureRecognizer) {
+        print(sender.translation(in: view))
+        
         switch sender.state {
         case .began, .changed:
             moveGridViewWith(gesture: sender)
-        case .ended:
-            share()
+        case .ended, .cancelled:
+            // share if the swipe has past a certain point in Portrait mode
+            if UIWindow.isPortrait && sender.translation(in: view).y <= -60 {
+                share()
+            }
+            // ditto in Landscape mode
+            else if !UIWindow.isPortrait && sender.translation(in: view).x <= -110  {
+                share()
+            }
+            // otherwise just reset the position of the grid
+            else {
+                resetPosition()
+            }
         default:
             break
         }
@@ -72,6 +85,7 @@ class MainViewController: UIViewController {
     private func moveGridViewWith(gesture: UIPanGestureRecognizer) {
         let translation = gesture.translation(in: gridView)
         
+        // limit to an upward swipe in Portrait and to a left swipe in Landscape
         if UIWindow.isPortrait {
             if translation.y < 0 {
                 gridView.transform = CGAffineTransform(translationX: 0, y: translation.y)
@@ -86,15 +100,25 @@ class MainViewController: UIViewController {
     private func share() {
         finishUpTranslation()
 
-//        public typealias CompletionWithItemsHandler = (UIActivity.ActivityType?, Bool, [Any]?, Error?) -> Void
-        // let test: TimeInterval
-//
-        let vc = UIActivityViewController(activityItems: [gridView.asImage(), "Made with Instagrid"], applicationActivities: [])
-        vc.completionWithItemsHandler = { (activityType, completed, returnedItems, error) in
-            self.gridView.transform = .identity
+        let vc = UIActivityViewController(activityItems: [gridView.asUIImage, "Made with Instagrid"], applicationActivities: [])
+        vc.completionWithItemsHandler = { (activityType, completed, returnedItems, error) in self.reset()
         }
-            // Repositionner gridView à position initiale, gestion d'erreur, confirmation avec activityType
+        
         present(vc, animated: true)
+    }
+    
+    private func reset() {
+        resetPosition()
+        
+        for button in self.gridViewButtons {
+            button.setImage(UIImage(named: "Plus"), for: .normal)
+        }
+    }
+    
+    private func resetPosition() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.gridView.transform = .identity
+        })
     }
     
     private func finishUpTranslation() {
@@ -134,11 +158,7 @@ extension MainViewController: UIImagePickerControllerDelegate, UINavigationContr
 extension UIWindow {
     static var isPortrait: Bool {
         if #available(iOS 13.0, *) {
-            return UIApplication.shared.windows
-                .first?
-                .windowScene?
-                .interfaceOrientation
-                .isPortrait ?? false
+            return UIApplication.shared.windows.first?.windowScene?.interfaceOrientation.isPortrait ?? false
         } else {
             return UIApplication.shared.statusBarOrientation.isPortrait
         }
