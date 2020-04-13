@@ -12,9 +12,9 @@ class MainViewController: UIViewController {
     
     // MARK: Settings
     
-    @IBOutlet weak var gridView: GridView!
+    @IBOutlet private weak var gridView: GridView!
     @IBOutlet var gridViewButtons: [UIButton]!
-    @IBOutlet var layoutChoiceButtons: [UIButton]!
+    @IBOutlet private var layoutChoiceButtons: [UIButton]!
     
     var selectedButton: UIButton?
     
@@ -32,7 +32,7 @@ class MainViewController: UIViewController {
     
     // MARK: Layout Setup
     
-    @IBAction func layoutChoiceButtonTapped(_ sender: UIButton) {
+    @IBAction private func layoutChoiceButtonTapped(_ sender: UIButton) {
         for button in layoutChoiceButtons {
             button.isSelected = false
         }
@@ -55,7 +55,7 @@ class MainViewController: UIViewController {
 
     // MARK: Interaction
     
-    @IBAction func gridButtonTapped(_ sender: UIButton) {
+    @IBAction private func gridButtonTapped(_ sender: UIButton) {
         selectedButton = sender
         
         let imagePicker = UIImagePickerController()
@@ -66,9 +66,7 @@ class MainViewController: UIViewController {
         present(imagePicker, animated: true)
     }
     
-    @objc func dragGridView(_ sender: UIPanGestureRecognizer) {
-        print(sender.translation(in: view))
-        
+    @objc private func dragGridView(_ sender: UIPanGestureRecognizer) {
         switch sender.state {
         case .began, .changed:
             moveGridViewWith(gesture: sender)
@@ -163,33 +161,5 @@ class MainViewController: UIViewController {
         }
         
         return true
-    }
-}
-
-// MARK: Extensions
-
-extension MainViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let selectedImage = info[.editedImage] as? UIImage
-        for button in gridViewButtons where button == selectedButton {
-            button.setImage(selectedImage, for: .normal)
-            selectedButton = nil
-            break
-        }
-        picker.dismiss(animated: true)
-    }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true)
-    }
-}
-
-extension UIWindow {
-    static var isPortrait: Bool {
-        if #available(iOS 13.0, *) {
-            return UIApplication.shared.windows.first?.windowScene?.interfaceOrientation.isPortrait ?? false
-        } else {
-            return UIApplication.shared.statusBarOrientation.isPortrait
-        }
     }
 }

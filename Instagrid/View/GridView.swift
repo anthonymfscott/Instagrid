@@ -13,10 +13,10 @@ enum Layout {
   }
 
 class GridView: UIView {
-    @IBOutlet var topLeftButton: UIButton!
-    @IBOutlet var topRightButton: UIButton!
-    @IBOutlet var bottomLeftButton: UIButton!
-    @IBOutlet var bottomRightButton: UIButton!
+    @IBOutlet private var topLeftButton: UIButton!
+    @IBOutlet private var topRightButton: UIButton!
+    @IBOutlet private var bottomLeftButton: UIButton!
+    @IBOutlet private var bottomRightButton: UIButton!
     
     var layout: Layout = .oneTwo {
         didSet {
