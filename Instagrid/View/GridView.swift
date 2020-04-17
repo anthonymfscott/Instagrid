@@ -9,8 +9,8 @@
 import UIKit
 
 enum Layout {
-      case oneTwo, twoOne, twoTwo
-  }
+    case oneTwo, twoOne, twoTwo
+}
 
 class GridView: UIView {
     @IBOutlet private var topLeftButton: UIButton!
@@ -20,11 +20,11 @@ class GridView: UIView {
     
     var layout: Layout = .oneTwo {
         didSet {
-            setLayout(layout)
+            setLayout()
         }
     }
     
-    private func setLayout(_ layout: Layout) {
+    private func setLayout() {
         switch layout {
         case .oneTwo:
             topRightButton.isHidden = true
@@ -35,15 +35,6 @@ class GridView: UIView {
         case .twoTwo:
             topRightButton.isHidden = false
             bottomRightButton.isHidden = false
-        }
-    }
-}
-
-extension UIView {
-    var asUIImage: UIImage {
-        let renderer = UIGraphicsImageRenderer(bounds: bounds)
-        return renderer.image { ctx in
-            layer.render(in: ctx.cgContext)
         }
     }
 }

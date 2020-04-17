@@ -15,8 +15,9 @@
 		04DADB2A2373749900DCD12F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04DADB282373749900DCD12F /* Main.storyboard */; };
 		04DADB2C2373749A00DCD12F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DADB2B2373749A00DCD12F /* Assets.xcassets */; };
 		04DADB2F2373749A00DCD12F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04DADB2D2373749A00DCD12F /* LaunchScreen.storyboard */; };
-		AD39F23F24444B0C00054877 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39F23E24444B0C00054877 /* Extensions.swift */; };
 		AD9A581D243EFE02001A7F57 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04C69D062376BF51009C68EE /* Delm-Medium.otf */; };
+		ADBD718E2449B09800210C9D /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBD718D2449B09800210C9D /* UIViewExtensions.swift */; };
+		ADBD71902449B0A400210C9D /* UIWindowExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBD718F2449B0A400210C9D /* UIWindowExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +32,8 @@
 		04DADB2B2373749A00DCD12F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04DADB2E2373749A00DCD12F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04DADB302373749A00DCD12F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AD39F23E24444B0C00054877 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		ADBD718D2449B09800210C9D /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		ADBD718F2449B0A400210C9D /* UIWindowExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				04DADB262373749900DCD12F /* MainViewController.swift */,
-				AD39F23E24444B0C00054877 /* Extensions.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -98,9 +99,19 @@
 			children = (
 				0419ED3A237AE58D00A8A1FC /* View */,
 				0419ED3B237AE59300A8A1FC /* Controller */,
+				ADBD718C2449B08000210C9D /* Extensions */,
 				0419ED39237AE43B00A8A1FC /* Supporting Files */,
 			);
 			path = Instagrid;
+			sourceTree = "<group>";
+		};
+		ADBD718C2449B08000210C9D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ADBD718D2449B09800210C9D /* UIViewExtensions.swift */,
+				ADBD718F2449B0A400210C9D /* UIWindowExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,10 +187,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD39F23F24444B0C00054877 /* Extensions.swift in Sources */,
+				ADBD71902449B0A400210C9D /* UIWindowExtensions.swift in Sources */,
 				04DADB272373749900DCD12F /* MainViewController.swift in Sources */,
 				04DADB232373749900DCD12F /* AppDelegate.swift in Sources */,
 				04DADB252373749900DCD12F /* SceneDelegate.swift in Sources */,
+				ADBD718E2449B09800210C9D /* UIViewExtensions.swift in Sources */,
 				04918F4C23A7B73A006C6CC0 /* GridView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

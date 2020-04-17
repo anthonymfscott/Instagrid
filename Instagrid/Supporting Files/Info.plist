@@ -61,7 +61,7 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string></string>
+	<string>Instagrid needs to access your library to let you create beautiful montages.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Delm-Medium.otf</string>

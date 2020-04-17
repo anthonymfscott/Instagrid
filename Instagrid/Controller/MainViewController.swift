@@ -18,6 +18,16 @@ class MainViewController: UIViewController {
     
     var selectedButton: UIButton?
     
+    var isFinalGridConform: Bool {
+        // if any visible button from the grid shows a "plus", return false; return true otherwise
+        for button in gridViewButtons where button.isHidden == false && button.image(for: .normal) == UIImage(named: "Plus") {
+            print("grid is not conform")
+            return false
+        }
+        print("grid is conform")
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,8 +58,11 @@ class MainViewController: UIViewController {
             gridView.layout = .oneTwo
         case 2:
             gridView.layout = .twoOne
-        default:
+        case 3:
             gridView.layout = .twoTwo
+        default:
+            print("Tag not recognized. Add a new layout case.")
+            break
         }
     }
 
@@ -67,6 +80,7 @@ class MainViewController: UIViewController {
     }
     
     @objc private func dragGridView(_ sender: UIPanGestureRecognizer) {
+        
         switch sender.state {
         case .began, .changed:
             moveGridViewWith(gesture: sender)
@@ -75,8 +89,8 @@ class MainViewController: UIViewController {
             if UIWindow.isPortrait && sender.translation(in: view).y <= -60 {
                 share()
             }
-            // ditto in Landscape mode
-            else if !UIWindow.isPortrait && sender.translation(in: view).x <= -110  {
+            // ditto in Landscape mode 
+            else if !UIWindow.isPortrait && sender.translation(in: view).x <= -110 {
                 share()
             }
             // otherwise just reset the grid's position
@@ -92,19 +106,21 @@ class MainViewController: UIViewController {
         let translation = gesture.translation(in: gridView)
         
         // limit to an upward swipe in Portrait and to a left swipe in Landscape
-        if UIWindow.isPortrait {
-            if translation.y < 0 {
+        if UIWindow.isPortrait && translation.y < 0 {
                 gridView.transform = CGAffineTransform(translationX: 0, y: translation.y)
-            }
-        } else {
-            if translation.x < 0 {
+        } else if !UIWindow.isPortrait && translation.x < 0 {
                 gridView.transform = CGAffineTransform(translationX: translation.x, y: 0)
-            }
         }
     }
    
     private func share() {
-        guard isFinalGridConform() else { return }
+        guard isFinalGridConform else {
+            resetPosition()
+            let ac = UIAlertController(title: "Unable to share", message: "Your grid is missing pictures!", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .cancel))
+            present(ac, animated: true)
+            return
+        }
         
         completeTranslation()
 
@@ -139,27 +155,30 @@ class MainViewController: UIViewController {
     private func resetAll() {
         resetPosition()
         
-        for button in self.gridViewButtons {
+        for button in gridViewButtons {
             button.setImage(UIImage(named: "Plus"), for: .normal)
         }
     }
     
-    private func resetPosition(_: UIAlertAction? = nil) {
+    private func resetPosition() {
         UIView.animate(withDuration: 0.5, animations: {
             self.gridView.transform = .identity
         })
     }
-    
-    private func isFinalGridConform() -> Bool {
-        for button in gridViewButtons where button.isHidden == false {
-            if button.image(for: .normal) == UIImage(named: "Plus") {
-                let ac = UIAlertController(title: "Unable to share", message: "Your grid is missing pictures!", preferredStyle: .alert)
-                ac.addAction(UIAlertAction(title: "OK", style: .cancel, handler: self.resetPosition))
-                present(ac, animated: true)
-                return false
-            }
+}
+
+extension MainViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let selectedImage = info[.editedImage] as? UIImage
+        for button in gridViewButtons where button == selectedButton {
+            button.setImage(selectedImage, for: .normal)
+            selectedButton = nil
+            break
         }
-        
-        return true
+        picker.dismiss(animated: true)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true)
     }
 }
