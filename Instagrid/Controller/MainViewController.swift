@@ -81,7 +81,6 @@ class MainViewController: UIViewController {
     }
     
     @objc private func dragGridView(_ sender: UIPanGestureRecognizer) {
-        
         switch sender.state {
         case .began, .changed:
             moveGridViewWith(gesture: sender)
@@ -119,6 +118,7 @@ class MainViewController: UIViewController {
     private func share() {
         guard isFinalGridConform else {
             resetPosition()
+            
             let ac = UIAlertController(title: "Unable to share", message: "Your grid is missing pictures!", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .cancel))
             present(ac, animated: true)

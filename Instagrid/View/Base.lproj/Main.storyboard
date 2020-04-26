@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,25 +13,25 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Instagrid" translatesAutoresizingMaskIntoConstraints="NO" id="QcO-4k-ODS" userLabel="Logo Instagrid">
-                                <rect key="frame" x="125.5" y="20" width="124" height="39"/>
+                                <rect key="frame" x="145" y="20" width="124" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="124" id="Dmu-kU-rIw"/>
                                     <constraint firstAttribute="height" constant="39" id="vc1-sq-U9N"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SBk-vI-cci" userLabel="Swipe to share Stack View">
-                                <rect key="frame" x="113.5" y="131.5" width="148" height="44.5"/>
+                                <rect key="frame" x="133" y="146.66666666666666" width="148" height="44.333333333333343"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="AAB-qS-UJr">
-                                        <rect key="frame" x="67.5" y="0.0" width="13.5" height="9.5"/>
+                                        <rect key="frame" x="67.333333333333343" y="0.0" width="13.333333333333329" height="9.6666666666666661"/>
                                         <variation key="heightClass=compact" image="Arrow Left"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zzu-kx-c7b">
-                                        <rect key="frame" x="0.0" y="17.5" width="148" height="27"/>
+                                        <rect key="frame" x="0.0" y="17.666666666666686" width="148" height="26.666666666666671"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Swipe up to share">
                                                 <attributes>
@@ -57,10 +57,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hXN-q3-tV8" userLabel="Layout Choice View">
-                                <rect key="frame" x="54" y="559.5" width="267" height="83.5"/>
+                                <rect key="frame" x="54" y="615.33333333333337" width="306" height="96.666666666666629"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHL-Ei-R04" userLabel="Left Button">
-                                        <rect key="frame" x="0.0" y="0.0" width="83.5" height="83.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="96.666666666666671" height="96.666666666666671"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="eHL-Ei-R04" secondAttribute="height" multiplier="1:1" id="LUR-ic-I4y"/>
                                         </constraints>
@@ -71,7 +71,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFb-m3-8K6" userLabel="Center Button">
-                                        <rect key="frame" x="91.5" y="0.0" width="84" height="83.5"/>
+                                        <rect key="frame" x="104.66666666666666" y="0.0" width="96.666666666666657" height="96.666666666666671"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="HFb-m3-8K6" secondAttribute="height" multiplier="1:1" id="UeM-tP-Kgv"/>
                                         </constraints>
@@ -82,7 +82,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cN7-Le-U5P" userLabel="Right Button">
-                                        <rect key="frame" x="183.5" y="0.0" width="83.5" height="83.5"/>
+                                        <rect key="frame" x="209.33333333333329" y="0.0" width="96.666666666666657" height="96.666666666666671"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="cN7-Le-U5P" secondAttribute="height" multiplier="1:1" id="umw-UI-wJd"/>
                                         </constraints>
@@ -102,16 +102,16 @@
                                 <variation key="heightClass=compact" axis="vertical"/>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dwg-bp-ZYC" customClass="GridView" customModule="Instagrid" customModuleProvider="target">
-                                <rect key="frame" x="38" y="184" width="299" height="299"/>
+                                <rect key="frame" x="38" y="199" width="338" height="338"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="jSz-ek-msd" userLabel="Parent Stack View">
-                                        <rect key="frame" x="16" y="16" width="267" height="267"/>
+                                        <rect key="frame" x="16" y="16" width="306" height="306"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hes-Ke-dm2" userLabel="Top Stack View">
-                                                <rect key="frame" x="0.0" y="0.0" width="267" height="125.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="306" height="145"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wQ-Dz-c6q" userLabel="Left Button ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="267" height="125.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="306" height="145"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="Plus"/>
                                                         <connections>
@@ -119,7 +119,7 @@
                                                         </connections>
                                                     </button>
                                                     <button hidden="YES" opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62l-Vk-FuT" userLabel="Right Button">
-                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="125.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="145"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="Plus"/>
                                                         <connections>
@@ -129,10 +129,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Sy8-Og-pQc" userLabel="Bottom Stack View">
-                                                <rect key="frame" x="0.0" y="141.5" width="267" height="125.5"/>
+                                                <rect key="frame" x="0.0" y="161" width="306" height="145"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inR-xV-GpR" userLabel="Left Button ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="125.5" height="125.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="145" height="145"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="Plus"/>
                                                         <connections>
@@ -140,7 +140,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvz-Iu-Cld" userLabel="Right Button">
-                                                        <rect key="frame" x="141.5" y="0.0" width="125.5" height="125.5"/>
+                                                        <rect key="frame" x="161" y="0.0" width="145" height="145"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="Plus"/>
                                                         <connections>
@@ -209,12 +209,12 @@
                             <mask key="constraints">
                                 <exclude reference="AWl-hr-Fym"/>
                                 <exclude reference="pzJ-bS-b8g"/>
+                                <exclude reference="fmg-O4-siB"/>
                                 <exclude reference="Tlj-Gu-Qzb"/>
                                 <exclude reference="lSF-bA-zrZ"/>
                                 <exclude reference="0iH-Rq-HXR"/>
                                 <exclude reference="HNG-jl-ren"/>
                                 <exclude reference="gwr-fL-ETy"/>
-                                <exclude reference="fmg-O4-siB"/>
                                 <exclude reference="92Y-fD-4l8"/>
                                 <exclude reference="mCU-hx-3fU"/>
                             </mask>
@@ -225,6 +225,9 @@
                                 <exclude reference="PwL-6s-mYD"/>
                                 <exclude reference="RaQ-Qi-WKY"/>
                                 <include reference="pzJ-bS-b8g"/>
+                                <include reference="4Ld-z7-AHl"/>
+                                <include reference="fmg-O4-siB"/>
+                                <exclude reference="t94-9g-Wfj"/>
                                 <include reference="Tlj-Gu-Qzb"/>
                                 <exclude reference="aVr-tZ-p41"/>
                                 <include reference="lSF-bA-zrZ"/>
@@ -236,9 +239,6 @@
                                 <include reference="gwr-fL-ETy"/>
                                 <exclude reference="psO-XL-Lr5"/>
                                 <exclude reference="ueq-n9-M1a"/>
-                                <include reference="4Ld-z7-AHl"/>
-                                <include reference="fmg-O4-siB"/>
-                                <exclude reference="t94-9g-Wfj"/>
                                 <include reference="92Y-fD-4l8"/>
                                 <include reference="mCU-hx-3fU"/>
                                 <exclude reference="rg2-ak-Ltg"/>
@@ -262,8 +262,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Arrow Left" width="9.5" height="13.5"/>
-        <image name="Arrow Up" width="13.5" height="9.5"/>
+        <image name="Arrow Left" width="9.6666669845581055" height="13.333333015441895"/>
+        <image name="Arrow Up" width="13.333333015441895" height="9.6666669845581055"/>
         <image name="Instagrid" width="124" height="39"/>
         <image name="Layout 1" width="80" height="80"/>
         <image name="Layout 2" width="80" height="80"/>
